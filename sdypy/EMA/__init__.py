@@ -1,4 +1,9 @@
-__version__ = "0.29.1"
+from importlib.metadata import version, PackageNotFoundError
+
+try:
+    __version__ = version("sdypy-EMA")
+except PackageNotFoundError:  # source checkout without installed metadata
+    __version__ = "0+unknown"
 
 from .EMA import Model
 from .tools import *
