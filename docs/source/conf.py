@@ -24,10 +24,12 @@ project = 'sdypy-EMA'
 copyright = '2025, LADISK'
 author = 'Klemen Zaletelj, Tomaž Bregar, Domen Gorjup, Janko Slavič, et al.'
 
+# Version is sourced from the installed distribution metadata so the docs never
+# drift from the package (RTD installs the package before building).
+from importlib.metadata import version as _get_version
+release = _get_version('sdypy-EMA')
 # The short X.Y version
-version = '0.29'
-# The full version, including alpha/beta/rc tags
-release = '0.29.1'
+version = '.'.join(release.split('.')[:2])
 
 
 # -- General configuration ---------------------------------------------------
