@@ -1,3 +1,2 @@
-# sphinx-rtd-theme
+pydata-sphinx-theme
 sphinx-copybutton
-sphinx-book-theme
